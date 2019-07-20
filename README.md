@@ -66,7 +66,14 @@ curl localhost:5000/ -X POST -d '{"hello": "world"}' -H "Content-Type: applicati
   "status": "success",
   "version": "0.0.1"
 }
+
+# Let it run for a while
+while True; do curl localhost:5000/ -X POST -d '{"hello": "world"}' -H "Content-Type: application/json"; sleep 1; done
 ```
+
+See the metrics in Cloudwatch:
+
+![](./static/cloudwatch.png)
 
 # Teardown
 

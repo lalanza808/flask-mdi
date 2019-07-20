@@ -67,3 +67,11 @@ curl localhost:5000/ -X POST -d '{"hello": "world"}' -H "Content-Type: applicati
   "version": "0.0.1"
 }
 ```
+
+# Teardown
+
+```bash
+aws kinesis delete-stream \
+    --stream-name mdi-test \
+    --region us-east-1
+```
